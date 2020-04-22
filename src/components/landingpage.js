@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
-import RubberBand from 'react-reveal/RubberBand';
+import Jello from 'react-reveal/Jello';
 import Bounce from 'react-reveal/Bounce';
 
 
@@ -12,14 +12,14 @@ class Landing extends Component {
        
         <Grid className="landing-grid">
             <Cell col={12}>
-            <RubberBand>
+            <Jello>
               <img
                 margin="auto"
                 src="https://cdn0.iconfinder.com/data/icons/transportation-vehicles-5/24/transportation_transport_vehicles_mustang_car-512.png"
                 alt="avatar"
                 className="avatar-img"
                 />
-            </RubberBand>
+            </Jello>
         <Bounce left>
               <div className="banner-text">
                 <h1>Alejandro's Portfolio</h1>
