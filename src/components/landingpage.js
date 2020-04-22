@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import Jello from 'react-reveal/Jello';
 import Bounce from 'react-reveal/Bounce';
-
+import Typing from 'react-typing-animation';
 
 
 class Landing extends Component {
@@ -22,10 +22,13 @@ class Landing extends Component {
             </Jello>
         <Bounce left>
               <div className="banner-text">
-                <h1>Alejandro's Portfolio</h1>
+                <Typing>
+                  <h1>Alejandro's Portfolio</h1>
+                </Typing>
               <hr/>
-
-            <p>Python | C/C++ | Java | React  | NodeJS | Java | ROS</p>
+            <Typing>
+              <p>Python | C/C++ | Java | React  | NodeJS | Java | ROS</p>
+            </Typing>
 
           <div className="social-links">
 
