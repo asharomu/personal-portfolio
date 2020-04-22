@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
+import Zoom from 'react-reveal/Zoom';
 
 
 class Landing extends Component {
@@ -8,12 +9,14 @@ class Landing extends Component {
       <div style={{width: '100%', margin: 'auto'}}>
         <Grid className="landing-grid">
           <Cell col={12}>
-            <img
-              margin="auto"
-              src="https://cdn0.iconfinder.com/data/icons/transportation-vehicles-5/24/transportation_transport_vehicles_mustang_car-512.png"
-              alt="avatar"
-              className="avatar-img"
-              />
+            <Zoom>
+              <img
+                margin="auto"
+                src="https://cdn0.iconfinder.com/data/icons/transportation-vehicles-5/24/transportation_transport_vehicles_mustang_car-512.png"
+                alt="avatar"
+                className="avatar-img"
+                />
+            </Zoom>
       
             <div className="banner-text">
               <h1>Alejandro's Portfolio</h1>
