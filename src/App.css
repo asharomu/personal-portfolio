@@ -1,13 +1,13 @@
 .header-color {
   background: #833ab4;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0639a7, #cfcccc, #4e4b50);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0639a7, #cfcccc, #4e4b50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #0639a7, #cfcccc, #2f2e30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0639a7, #cfcccc, #2f2e30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .landing-grid {
   background: #833ab4;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0639a7, #cfcccc, #4e4b50);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0639a7, #cfcccc, #4e4b50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #0639a7, #cfcccc, #2f2e30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0639a7, #cfcccc, #2f2e30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
   position: fixed;
   top: 0;
@@ -83,11 +83,12 @@
 }
 
 .banner-text {
-  background-color: black;
+  background-color: rgb(54, 53, 53);
   opacity: .8;
-  width: 75%;
+  width: 48%;
   margin: auto;
   border-radius: 10px;
+  padding: 1em;
 }
 
 .banner-text h1 {
@@ -106,6 +107,7 @@
   color: white;
   font-size: 20px;
   padding: 1em;
+  text-align: center;
 }
 
 .social-links {

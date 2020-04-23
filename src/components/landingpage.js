@@ -3,59 +3,67 @@ import { Grid, Cell } from 'react-mdl';
 import Jello from 'react-reveal/Jello';
 import Bounce from 'react-reveal/Bounce';
 import Typing from 'react-typing-animation';
+import ParticleAnimation from 'react-particle-animation';
 
 
 class Landing extends Component {
   render() {
     return(
       <div style={{width: '100%', margin: 'auto'}}>
-       
-        <Grid className="landing-grid">
-            <Cell col={12}>
-            <Jello>
-              <img
-                margin="auto"
-                src="https://cdn0.iconfinder.com/data/icons/transportation-vehicles-5/24/transportation_transport_vehicles_mustang_car-512.png"
-                alt="avatar"
-                className="avatar-img"
-                />
-            </Jello>
-        <Bounce left>
-              <div className="banner-text">
-                <Typing>
-                  <h1>Alejandro's Portfolio</h1>
+       <ParticleAnimation
+        numParticles={150}
+        interactive={true}
+        color={{r: 66, g: 158, b: 245, a:1000}}
+        lineWidth={1.0}
+        particleRadius={1.5}
+        particleSpeed={3.0}
+        
+        style={{
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        
+      }}
+      />
+        <Grid>
+          <Cell col={12}>
+    
+            <Bounce left>
+                  <div className="banner-text">
+                    <Typing>
+                      <h1>Alejandro's Portfolio</h1>
+                    </Typing>
+                  <hr/>
+                <Typing speed={0.1}>
+                  <p>Engineering | Coding | Automotive | Mechatronics </p>
                 </Typing>
-              <hr/>
-            <Typing>
-              <p>Python | C/C++ | Java | React  | NodeJS | Java | ROS</p>
-            </Typing>
 
-          <div className="social-links">
+              <div className="social-links">
 
-            {/* LinkedIn */}
-            <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-linkedin-square" aria-hidden="true" />
-            </a>
+                {/* LinkedIn */}
+                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                  <i className="fa fa-linkedin-square" aria-hidden="true" />
+                </a>
 
-            {/* Github */}
-            <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-github-square" aria-hidden="true" />
-            </a>
+                {/* Github */}
+                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                  <i className="fa fa-github-square" aria-hidden="true" />
+                </a>
 
-            {/* Freecodecamp */}
-            <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-free-code-camp" aria-hidden="true" />
-            </a>
+                {/* Freecodecamp */}
+                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                  <i className="fa fa-free-code-camp" aria-hidden="true" />
+                </a>
 
-            {/* Youtube */}
-            <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-youtube-square" aria-hidden="true" />
-            </a>
+                {/* Youtube */}
+                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                  <i className="fa fa-youtube-square" aria-hidden="true" />
+                </a>
 
-          </div>
               </div>
-          </Bounce>
-            </Cell>
+                  </div>
+              </Bounce>
+          </Cell>
         </Grid>
       </div>
     )
