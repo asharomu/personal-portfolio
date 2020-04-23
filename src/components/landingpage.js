@@ -31,11 +31,11 @@ class Landing extends Component {
             <Bounce left>
                   <div className="banner-text">
                     <Typing>
-                      <h1>Alejandro's Portfolio</h1>
+                      <h1 style={{textAlign:"center"}}>Alejo Haro</h1>
                     </Typing>
                   <hr/>
                 <Typing speed={0.1}>
-                  <p>Engineering | Coding | Automotive | Mechatronics </p>
+                  <p>Mechatronics Engineering student </p>
                 </Typing>
 
               <div className="social-links">
