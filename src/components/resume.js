@@ -53,9 +53,9 @@ class Resume extends Component {
               endYear={2022}
               schoolName="University of Waterloo"
               schoolDescription="Bachelor of Applied Science, Mechatronics Engineering"
-               />         
-              <h2>Experience</h2>
-            
+               />     
+            <hr style={{borderTop: '3px solid #8aa0cf'}} />    
+            <h2>Experience</h2>
             <Experience
               companyLogo={process.env.PUBLIC_URL + '/images/logos/Vemba.png'}
               logoHeight = "180px"
@@ -65,7 +65,8 @@ class Resume extends Component {
               jobTitle={"Quality Engineer"}
               jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
               />
-
+            
+            <hr style={{borderTop: '3px solid #8aa0cf'}} />
               <Experience
                 companyLogo={process.env.PUBLIC_URL + '/images/logos/GEOTAB.png'}
                 logoHeight = "60px"
@@ -75,7 +76,7 @@ class Resume extends Component {
                 jobTitle={"QA Analyst"}
                 jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
                 />
-
+            <hr style={{borderTop: '3px solid #8aa0cf'}} />
               <Experience
               companyLogo={process.env.PUBLIC_URL + '/images/logos/Vemba.png'}
               logoHeight = "180px"
@@ -85,7 +86,7 @@ class Resume extends Component {
               jobTitle={"Software Developer"}
               jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
               />
-
+            <hr style={{borderTop: '3px solid #8aa0cf'}} />
               <Experience
               companyLogo = {"https://cdn0.iconfinder.com/data/icons/car-brands/550/Ford_logo-512.png"}
               logoHeight = "170px"
@@ -96,7 +97,7 @@ class Resume extends Component {
               jobDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
               />
                 
-              <hr style={{borderTop: '3px solid #0639a7'}} />
+              <hr style={{borderTop: '3px solid #8aa0cf'}} />
               <h2>Skills</h2>
               
                 <Skills
