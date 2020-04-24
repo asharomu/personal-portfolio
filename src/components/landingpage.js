@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
-import Jello from 'react-reveal/Jello';
+import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
 import Typing from 'react-typing-animation';
 import ParticleAnimation from 'react-particle-animation';
@@ -35,7 +35,7 @@ class Landing extends Component {
                     </Typing>
                   <hr/>
                 <Typing speed={0.1}>
-                  <p>Mechatronics Engineering student </p>
+                  <p>Mechatronics Engineering </p>
                 </Typing>
 
               <div className="social-links">
@@ -62,7 +62,9 @@ class Landing extends Component {
 
               </div>
                   </div>
+                <img className='img-circular' src={process.env.PUBLIC_URL + '/images/logos/me.jpg'}/>
               </Bounce>
+                        
           </Cell>
         </Grid>
       </div>
