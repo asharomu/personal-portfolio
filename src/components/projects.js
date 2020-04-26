@@ -21,7 +21,7 @@ class Projects extends Component {
               Line following robot
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
+                <a style={{color: '#04649c'}} href="https://www.google.com" color='black'>GitHub</a>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
@@ -35,7 +35,7 @@ class Projects extends Component {
             Bubble shooter game
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
+                <a style={{color: '#04649c'}} href="https://github.com/asharomu/bubble-shooter-RTOS" target='_blank' color='black'>GitHub</a>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
@@ -55,7 +55,7 @@ class Projects extends Component {
               UWAFT - Connected Software
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
+                <a style={{color: '#04649c'}} href="https://uwaft.ca" target='_blank' color='black'>About UWAFT</a>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
@@ -68,13 +68,14 @@ class Projects extends Component {
               Real Time Clock System
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
+                <a style={{color: '#04649c'}} href="https://github.com/asharomu/real-time-clock" target='_blank' color='black'>GitHub</a>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
             </CardMenu>
           </Card>
         </div>
+        
       )
     } else if(this.state.activeTab === 2) {
       return (
