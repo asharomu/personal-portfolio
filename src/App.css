@@ -22,15 +22,16 @@
 
 /* Resume Page css */
 .resume-right-col {
-  background: rgb(255, 255, 255);
+  background:white;
   color: black;
   padding: 2em;
 }
 
 .resume-left-col {
-  background:rgb(206, 250, 252);
+  background:white;
   color: black;
   padding:2em;
+  border-right: 3px inset #8aa0cf;
 }
 
 /* contact page css */
