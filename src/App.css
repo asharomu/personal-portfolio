@@ -137,3 +137,30 @@
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
  }
+
+ input[type=text] {
+  background-color:#04649c;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+textarea[type=text]{
+  background-color:#04649c;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+input[type=email]{
+  background-color: #04649c;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}

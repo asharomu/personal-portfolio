@@ -15,12 +15,11 @@ class Resume extends Component {
             <Zoom>
               <div style={{textAlign: 'center'}}>
                 <img
-                  src="https://cdn1.iconfinder.com/data/icons/business-recruitment-1/64/Online-resume-computer-recruitment-application-512.png"
+                  src={process.env.PUBLIC_URL + '/images/logos/my_logo.png'}
                   alt="avatar"
                   style={{height: '300px'}}
                   />
               </div>
-              <h2 style={{paddingTop: '1em'}}>Alejandro Haro</h2>
               <h4 style={{color: 'grey'}}>Mechatronics Engineering student</h4>
               <hr style={{borderTop: '3px solid #8aa0cf', width: '80%'}}/>
               <p>Pursuing Mechatronics Engineering with interests and relevant experience in the automotive industry. Highly effective combination of quick-learning and problem-solving skills
