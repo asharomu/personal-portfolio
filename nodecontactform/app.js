@@ -69,11 +69,12 @@ app.post('/send', (req, res) => {
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-          return console.log(error);
+        res.status(400).json({"msg": "Message was not sent"})
+        return console.log(error);
       }
       console.log('Message sent: %s', info.messageId);   
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-      res.status(200).json({"msg": "mesage  has been sent"})
+      res.status(200).json({"msg": "Message has been sent"})
 
   });
   });
