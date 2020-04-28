@@ -1,30 +1,12 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
-import ContactForm from './contactform';
 import axios from 'axios';
 
-
-
 class Contact extends Component {
-    state = {
-      renderedResponse:''
-    }
 
-  
-  getResponse = async() => {
-    const response = await fetch('/send');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  }
-
-  componentDidMount() {
-    this.getResponse()
-      .then(res => {
-        const someData = res;
-        this.setState({ renderedResponse:someData });
-      })
+  state = {
+    status:400,
+    successMsg:''
   }
 
   handleSubmit(e){
@@ -34,6 +16,7 @@ class Contact extends Component {
     const message = document.getElementById('message').value;
     const company = document.getElementById('company').value;
     const phone = document.getElementById('phone').value;
+    
     axios({
         method: "POST", 
         url:"http://localhost:5000/send", 
@@ -45,12 +28,21 @@ class Contact extends Component {
             message: message
         }
     }).then((response)=>{
-        if (response.data.msg === 'success'){
-            alert("Message Sent."); 
-            this.resetForm()
-        }else if(response.data.msg === 'fail'){
-            alert("Message failed to send.")
-        }
+      
+      if (response.status == 200){
+        this.setState({
+          status: response.status,
+          successMsg:'Message sent successfully'
+        });
+      }
+
+      else {
+        this.setState({
+          status: response.status,
+          successMsg:'Message could not be send to Alejandro'
+        });
+      }
+      
     })
 }
 
@@ -60,13 +52,10 @@ resetForm(){
 
   render() {
 
-    const { renderedResponse } = this.state;
-
     return(
       <div className="contact-body">
         <Grid className="contact-grid">
           <Cell col={6}>
-          <p>{renderedResponse}</p>
 
             <h2>Alejandro Haro</h2>
             <img
@@ -80,14 +69,14 @@ resetForm(){
           <Cell col={6}>
             <h2>Contact Me </h2>
             <hr/>
-
-            <div className="col-sm-4 offset-sm-4">
+            
+            <div >
                 <form  onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <div className="form-group">
+                    <div className="form-group" paddingTop='12px'>
                         <label for="name">Name</label>
                         <input type="text" className="form-control" id="name" />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" paddingTop='12px'>
                         <label for="name">Company</label>
                         <input type="text" className="form-control" id="company" />
                     </div>
@@ -101,9 +90,10 @@ resetForm(){
                     </div>
                     <div className="form-group">
                         <label for="name">Message</label>
-                        <input type="text" className="form-control" id="message" />
+                        <textarea type="text" rows='8' className="form-control" id="message" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" >Submit</button>
+                    <p>{this.state.successMsg} </p>
                 </form>
             </div>
 
