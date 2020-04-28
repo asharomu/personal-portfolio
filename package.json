@@ -2,9 +2,16 @@
   "name": "myportfoliosite",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
   "dependencies": {
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "concurrently": "^5.2.0",
     "react": "^16.2.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "react-animate-on-scroll": "^2.1.5",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.2.0",
@@ -21,9 +28,12 @@
     "react-typing-animation": "^1.6.2"
   },
   "scripts": {
+    "server":"cd ./nodecontactform && node app.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn start\""
+  },
+  "proxy": "http://localhost:5000/"
 }

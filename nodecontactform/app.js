@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -13,12 +14,19 @@ app.set('view engine', 'handlebars');
 // Static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-// Body Parser Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
 
-app.get('/', (req, res) => {
-    res.render('contact', {layout: false});
+// Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/api/contact', (req, res) => {
+  res.send({express:'Hello from express'});
 });
 
 app.post('/send', (req, res) => {
@@ -42,7 +50,7 @@ app.post('/send', (req, res) => {
     secure: false, // true for 465, false for other ports
     auth: {
         user: 'alejandroharo1997@gmail.com', // generated ethereal user
-        pass: 'alejoelespolon'  // generated ethereal password
+        pass: ''  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false
@@ -66,8 +74,7 @@ app.post('/send', (req, res) => {
       console.log('Message sent: %s', info.messageId);   
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-      res.render('contact', {layout: false, msg:'Email sent successfully'});
   });
   });
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(port, () => console.log('Server started...'));

@@ -13,5 +13,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^4.0.3",
     "nodemailer": "^6.4.6"
-  }
+  },
+
+  "proxy": {
+    "target": "http://localhost:5000/contact"
+}
 }
