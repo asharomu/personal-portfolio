@@ -30,6 +30,7 @@ class Contact extends Component {
     }).then((response)=>{
       
       if (response.status == 200){
+        this.resetForm();
         this.setState({
           status: response.status,
           successMsg:'Message sent successfully'
@@ -70,7 +71,7 @@ resetForm(){
             <h2>Contact Me </h2>
             
             <div >
-                <form  onSubmit={this.handleSubmit.bind(this)} method="POST">
+                <form  id='contact-form' onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div>
                         <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Name</label>
                         <hr style={{ width: '10%', margin: 'auto', paddingBottom: '0.3em'}}/>
