@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 import axios from 'axios';
+import Jump from 'react-reveal/Jump';
 
 class Contact extends Component {
 
@@ -57,17 +58,19 @@ resetForm(){
       <div className="contact-body">
         <Grid className="contact-grid">
           <Cell col={6}>
-
+          <Jump>
             <h2>Alejandro Haro</h2>
-            <img
-              src={process.env.PUBLIC_URL + '/images/logos/me.jpg'}
-              alt="avatar"
-              style={{height: '250px'}}
-               />
+              <img
+                src={process.env.PUBLIC_URL + '/images/logos/me.jpg'}
+                alt="avatar"
+                style={{height: '250px'}}
+                />
              <p style={{ width: '75%', margin: 'auto', paddingTop: '1em', fontSize:'20px', fontFamily:'Oxygen'}}>Let's talk. Shoot me a message</p>
+             </Jump>
 
           </Cell>
           <Cell col={6}>
+            <Jump>
             <h2>Contact Me </h2>
             
             <div >
@@ -101,7 +104,7 @@ resetForm(){
                     <p>{this.state.successMsg} </p>
                 </form>
             </div>
-
+            </Jump>
           </Cell>
         </Grid>
       </div>
