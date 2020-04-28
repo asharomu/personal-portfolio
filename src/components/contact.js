@@ -68,53 +68,39 @@ resetForm(){
           </Cell>
           <Cell col={6}>
             <h2>Contact Me </h2>
-            <hr/>
             
             <div >
                 <form  onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <div className="form-group" paddingTop='12px'>
-                        <label for="name">Name</label>
-                        <input type="text" className="form-control" id="name" />
+                    <div>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Name</label>
+                        <hr style={{ width: '10%', margin: 'auto', paddingBottom: '0.3em'}}/>
+                        <input type="text" className="form-control" id="name"/>
                     </div>
                     <div className="form-group" paddingTop='12px'>
-                        <label for="name">Company</label>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Company</label>
+                        <hr style={{ width: '13%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="text" className="form-control" id="company" />
                     </div>
                     <div className="form-group">
-                        <label for="name">Phone</label>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Phone</label>
+                        <hr style={{ width: '10%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="text" className="form-control" id="phone" />
                     </div>
                     <div className="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label for="exampleInputEmail1" style={{fontSize: '20px', fontFamily: 'Anton'}}>Email address</label>
+                        <hr style={{ width: '22%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group">
-                        <label for="name">Message</label>
-                        <textarea type="text" rows='8' className="form-control" id="message" />
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Message</label>
+                        <hr style={{ width: '15%', margin: 'auto', paddingBottom: '0.3em'}}/>
+                        <textarea type="text" rows='5' className="form-control" id="message" />
                     </div>
-                    <button type="submit" >Submit</button>
+                    <button type="submit" className='button1' >Submit</button>
                     <p>{this.state.successMsg} </p>
                 </form>
             </div>
 
-            <div className="contact-list">
-              <List>
-                <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
-                    <i className="fa fa-phone-square" aria-hidden="true"/>
-                    (226) 8687100
-                  </ListItemContent>
-                </ListItem>
-
-                <ListItem>
-                  <ListItemContent style={{fontSize: '30px', fontFamily: 'Anton'}}>
-                    <i className="fa fa-envelope" aria-hidden="true"/>
-                    asharomu@uwaterloo.ca
-                  </ListItemContent>
-                </ListItem>
-              </List>
-              
-            </div>
           </Cell>
         </Grid>
       </div>
