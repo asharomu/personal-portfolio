@@ -64,7 +64,7 @@ resetForm(){
               alt="avatar"
               style={{height: '250px'}}
                />
-             <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>Add text to contact</p>
+             <p style={{ width: '75%', margin: 'auto', paddingTop: '1em', fontSize:'20px', fontFamily:'Oxygen'}}>Let's talk. Shoot me a message</p>
 
           </Cell>
           <Cell col={6}>
@@ -73,27 +73,27 @@ resetForm(){
             <div >
                 <form  id='contact-form' onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div>
-                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Name</label>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Oxygen'}}>Name</label>
                         <hr style={{ width: '10%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="text" className="form-control" id="name"/>
                     </div>
                     <div className="form-group" paddingTop='12px'>
-                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Company</label>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Oxygen'}}>Company</label>
                         <hr style={{ width: '13%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="text" className="form-control" id="company" />
                     </div>
                     <div className="form-group">
-                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Phone</label>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Oxygen'}}>Phone</label>
                         <hr style={{ width: '10%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="text" className="form-control" id="phone" />
                     </div>
                     <div className="form-group">
-                        <label for="exampleInputEmail1" style={{fontSize: '20px', fontFamily: 'Anton'}}>Email address</label>
+                        <label for="exampleInputEmail1" style={{fontSize: '20px', fontFamily: 'Oxygen'}}>Email address</label>
                         <hr style={{ width: '22%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group">
-                        <label for="name" style={{fontSize: '20px', fontFamily: 'Anton'}}>Message</label>
+                        <label for="name" style={{fontSize: '20px', fontFamily: 'Oxygen'}}>Message</label>
                         <hr style={{ width: '15%', margin: 'auto', paddingBottom: '0.3em'}}/>
                         <textarea type="text" rows='5' className="form-control" id="message" />
                     </div>
