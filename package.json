@@ -6,7 +6,7 @@
     "concurrently": "^5.2.0"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "concurrently": "^5.2.0",
     "react": "^16.2.0",
